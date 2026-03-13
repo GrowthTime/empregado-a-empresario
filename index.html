@@ -335,8 +335,8 @@
             line-height: 1.2;
         }
         .vantagens__grid {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 0;
             max-width: 1140px;
             margin: 0 auto;
@@ -667,6 +667,9 @@
             .vantagens {
                 padding: 30px 15px 80px;
             }
+            .vantagens__grid {
+                grid-template-columns: 1fr;
+            }
             .vantagens__heading { font-size: 24px; }
             .vantagem-card {
                 margin: 5px 0;
@@ -781,7 +784,7 @@
                         <img src="https://img.youtube.com/vi/m36L5nqZkB8/hqdefault.jpg" alt="Depoimento Ewerton Felipe" loading="lazy">
                         <div class="play-btn"></div>
                     </div>
-                    <p class="depo-card__text">Ele come&ccedil;ou seu pr&oacute;prio neg&oacute;cio em meio a pandemia e <strong>recuperou o investimento do curso com 1 m&ecirc;s e meio</strong>.</p>
+                    <p class="depo-card__text">Ele come&ccedil;ou seu pr&oacute;prio neg&oacute;cio em meio a pandemia e <strong>recuperou o investimento do curso com 1 m&ecirc;s e meio.</strong></p>
                 </div>
                 <div class="depo-card">
                     <h3 class="depo-card__name">Maria Aparecida</h3>
