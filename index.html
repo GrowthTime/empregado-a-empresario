@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empregado a Empres&aacute;rio com Salgados &ndash; Chef. Claudia</title>
+    <style>
+        /* ========== FONTS ========== */
+        @font-face {
+            font-family: 'Flange';
+            src: url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/flangebq_bold.woff2') format('woff2'),
+                 url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/flangebq_bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face { font-family:'Museo Rounded'; src:url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/MuseoSansRounded100.woff') format('woff'); font-weight:100; font-display:swap; }
+        @font-face { font-family:'Museo Rounded'; src:url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/MuseoSansRounded300.woff') format('woff'); font-weight:300; font-display:swap; }
+        @font-face { font-family:'Museo Rounded'; src:url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/MuseoSansRounded500.woff') format('woff'); font-weight:500; font-display:swap; }
+        @font-face { font-family:'Museo Rounded'; src:url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/MuseoSansRounded700.woff') format('woff'); font-weight:700; font-display:swap; }
+        @font-face { font-family:'Museo Rounded'; src:url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/MuseoSansRounded900.woff') format('woff'); font-weight:800; font-display:swap; }
+        @font-face { font-family:'Museo Rounded'; src:url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/MuseoSansRounded1000.woff') format('woff'); font-weight:900; font-display:swap; }
+        @font-face {
+            font-family: 'Lakeside';
+            src: url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/Lakeside-Regular.woff2') format('woff2'),
+                 url('https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/Lakeside-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* ========== RESET ========== */
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: 'Museo Rounded', sans-serif;
+            background: #FDF7E7;
+            color: #47270D;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width:100%; height:auto; display:block; }
+        a { text-decoration:none; color:inherit; }
+
+        /* ========== UTILITIES ========== */
+        .container { max-width:1140px; margin:0 auto; }
+        .text-center { text-align:center; }
+        .uppercase { text-transform:uppercase; }
+
+        /* ========== CTA BUTTONS ========== */
+        .btn-cta {
+            display: inline-block;
+            font-family: 'Flange', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background: linear-gradient(37deg, #F29800 60%, #FAD66F 100%);
+            padding: 20px 50px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            line-height: 1.2;
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .btn-cta--brown {
+            background: linear-gradient(37deg, #47270D 60%, #2B1606 100%);
+        }
+        .btn-cta--gold {
+            background: linear-gradient(264deg, #F29800 0%, #FAD66F 100%);
+            color: #2B1606;
+        }
+        .btn-cta--small { font-size:24px; }
+        .btn-cta--arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .btn-cta--arrow svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* ========== SECTION 1: HERO ========== */
+        .hero {
+            background: radial-gradient(at top center, #47270D 0%, #221003 34%);
+            padding: 0 0 30px 0;
+            overflow: hidden;
+        }
+        .hero__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1140px;
+            margin: 0 auto;
+            align-items: end;
+        }
+        .hero__left {
+            padding: 40px 40px 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .hero__logo {
+            max-width: 403px;
+            margin-top: -50px;
+            align-self: flex-start;
+            margin-bottom: 10px;
+        }
+        .hero__title {
+            font-family: 'Flange', sans-serif;
+            font-size: 54px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #FAEEDE;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+        .hero__title .highlight { color: #f29000; }
+        .hero__subtitle {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #F29800;
+            margin-bottom: 8px;
+        }
+        .hero__subtitle strong { font-weight: 900; }
+        .hero__date {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #FAEEDE;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+        .hero__access {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #FAEEDE;
+            letter-spacing: 1px;
+            margin-top: -2px;
+            margin-bottom: 25px;
+        }
+        .hero__right {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .hero__right img {
+            width: 100%;
+            max-width: 786px;
+            margin-bottom: -2px;
+        }
+
+        /* ========== SECTION 2: COMO FUNCIONA ========== */
+        .como-funciona {
+            background: linear-gradient(42deg, #FAEEDE 74%, #FFFFFF 100%);
+            padding: 50px 20px 100px;
+        }
+        .como-funciona__intro {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 21px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #F22435;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .como-funciona__intro strong { font-weight: 800; }
+        .como-funciona__heading {
+            font-family: 'Flange', sans-serif;
+            font-size: 42px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #2B1606;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        .como-funciona__heading strong { font-weight: 700; }
+        .como-funciona__cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 0 30px;
+        }
+        .step-card {
+            flex: 1;
+            max-width: 380px;
+            background: radial-gradient(at top right, #47270D 20%, #2B1606 47%);
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.2);
+            padding: 30px;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .step-card__num {
+            font-family: 'Flange', sans-serif;
+            font-size: 48px;
+            color: #FFFFFF;
+            line-height: 1.1;
+        }
+        .step-card__title {
+            font-family: 'Flange', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #F29800;
+            line-height: 1.1;
+        }
+        .step-card__desc {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-right: 20px;
+        }
+
+        /* ========== SECTION 3: DEPOIMENTOS ========== */
+        .depoimentos {
+            background: #F29800;
+            padding: 50px 20px 100px;
+        }
+        .depoimentos__heading {
+            font-family: 'Flange', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #47270D;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        .depoimentos__row {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+        .depo-card {
+            flex: 1;
+            max-width: 380px;
+            background: #FFFFFF;
+            border: 1px solid #EFEFEF;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.2);
+            margin: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .depo-card__name {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #47270D;
+        }
+        .depo-card__video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+            cursor: pointer;
+        }
+        .depo-card__video img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .depo-card__video .play-btn {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 68px; height: 48px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .depo-card__video .play-btn::after {
+            content: '';
+            display: block;
+            width: 0; height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #FFFFFF;
+            margin-left: 3px;
+        }
+        .depo-card__video iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+        }
+        .depo-card__text {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 21px;
+            font-weight: 400;
+            color: #2B1606;
+            line-height: 27px;
+        }
+        .depo-card__text strong { font-weight: 800; }
+        .depoimentos__spacer { height: 150px; }
+
+        /* ========== SECTION 4: VANTAGENS ========== */
+        .vantagens {
+            background: linear-gradient(153deg, #754219 0%, #2B1606 46%);
+            padding: 50px 20px 150px;
+        }
+        .vantagens__heading {
+            font-family: 'Flange', sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #FAEEDE;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        .vantagens__grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .vantagem-card {
+            background: #FFFFFF;
+            border-radius: 30px;
+            margin: 10px;
+            padding: 30px 30px 60px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .vantagem-card__icon {
+            width: 95px;
+            height: auto;
+            align-self: flex-start;
+        }
+        .vantagem-card__title {
+            font-family: 'Flange', sans-serif;
+            font-size: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #47270D;
+            line-height: 1.2;
+        }
+        .vantagem-card__desc {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2B1606;
+            line-height: 1.3;
+        }
+
+        /* ========== SECTION 5: OFERTA ========== */
+        .oferta {
+            background: linear-gradient(311deg, #FAEEDE 68%, #FFFFFF 100%);
+            padding: 100px 20px 80px;
+        }
+        .oferta__inner {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .oferta__text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 550px;
+        }
+        .oferta__text h2 {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #47270D;
+            line-height: 42px;
+        }
+        .oferta__text h2 .bold { font-weight: 800; }
+        .oferta__text h2 .red { font-weight: 800; color: #f22435; }
+        .oferta__card {
+            flex: 0 1 460px;
+            background: linear-gradient(207deg, #5F2712 0%, #2B1606 58%);
+            border-radius: 30px;
+            padding: 50px 30px 80px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+        }
+        .oferta__card-title {
+            font-family: 'Flange', sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #FAEEDE;
+            margin-bottom: 30px;
+            width: 72%;
+            line-height: 1.1;
+        }
+        .oferta__card-sub {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: #FAEEDE;
+            line-height: 30px;
+            width: 95%;
+        }
+        .oferta__card-sub .underline-orange {
+            color: #f29800;
+            text-decoration: underline;
+        }
+        .oferta__card-price {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: #FAEEDE;
+            margin: 30px 0;
+            width: 95%;
+        }
+        .oferta__card-price .strike {
+            color: #f22435;
+            text-decoration: line-through;
+        }
+        .oferta__card-free {
+            font-family: 'Flange', sans-serif;
+            font-size: 90px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #FAEEDE;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        /* ========== SECTION 6: BIO ========== */
+        .bio {
+            background: radial-gradient(at top center, #47270D 0%, #000000 100%);
+            padding: 50px 20px 100px;
+        }
+        .bio__inner {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .bio__photo {
+            flex: 0 0 auto;
+            width: 80%;
+            max-width: 374px;
+        }
+        .bio__photo img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .bio__content {
+            flex: 1;
+            padding: 30px;
+        }
+        .bio__text {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 21px;
+            font-weight: 300;
+            color: #FAEEDE;
+            line-height: 25px;
+            margin-bottom: 15px;
+        }
+        .bio__logo {
+            max-width: 30%;
+            margin-top: 20px;
+        }
+
+        /* ========== SECTION 7: FAQ ========== */
+        .faq {
+            background: #FDF7E7;
+            padding: 50px 20px 120px;
+        }
+        .faq__heading {
+            font-family: 'Flange', sans-serif;
+            font-size: 36px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #2B1606;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .faq__list {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .faq__item {
+            border-top: 1px solid #47270D;
+            margin-bottom: 28px;
+        }
+        .faq__item:last-child {
+            border-bottom: 1px solid #47270D;
+        }
+        .faq__question {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 18px 0;
+            cursor: pointer;
+            user-select: none;
+        }
+        .faq__question-icon {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            fill: #47270D;
+            transition: transform 0.3s;
+        }
+        .faq__item.active .faq__question-icon {
+            fill: #F29800;
+            transform: rotate(90deg);
+        }
+        .faq__question-text {
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #47270D;
+        }
+        .faq__answer {
+            display: none;
+            padding: 0 0 18px 25px;
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 21px;
+            font-weight: 300;
+            color: #2B1606;
+            line-height: 1.5;
+        }
+        .faq__item.active .faq__answer {
+            display: block;
+        }
+        .faq__cta {
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        /* ========== SECTION 8: FOOTER ========== */
+        .site-footer {
+            background: radial-gradient(at top center, #47270D 0%, #110701 63%);
+            padding: 0 20px 100px;
+            text-align: center;
+        }
+        .site-footer__logo {
+            max-width: 403px;
+            margin: 50px auto 30px;
+        }
+        .site-footer__text {
+            max-width: 60%;
+            margin: 0 auto;
+            font-family: 'Museo Rounded', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: #FAEEDE;
+            line-height: 22px;
+        }
+        .site-footer__text a {
+            color: #FAEEDE;
+            text-decoration: underline;
+        }
+        .site-footer__text strong { font-weight: 700; }
+
+        /* ========== RESPONSIVE: TABLET ========== */
+        @media (max-width: 1024px) {
+            .hero__title { font-size: 40px; }
+            .hero__left { padding: 30px 20px; }
+            .como-funciona__heading { font-size: 36px; }
+            .step-card { min-height: 380px; }
+            .step-card__title { font-size: 26px; }
+            .step-card__desc { font-size: 20px; }
+            .depoimentos__heading { font-size: 36px; }
+            .vantagens__heading { font-size: 36px; }
+            .vantagem-card__title { font-size: 26px; }
+            .vantagem-card__desc { font-size: 20px; }
+            .oferta__card-title { font-size: 36px; }
+            .oferta__card-free { font-size: 70px; }
+        }
+
+        /* ========== RESPONSIVE: MOBILE ========== */
+        @media (max-width: 767px) {
+            .hero__grid {
+                grid-template-columns: 1fr;
+            }
+            .hero__left {
+                padding: 30px 20px 20px;
+                text-align: center;
+                align-items: center;
+            }
+            .hero__logo {
+                margin-top: 0;
+                max-width: 280px;
+                align-self: center;
+            }
+            .hero__title { font-size: 32px; }
+            .hero__subtitle { font-size: 20px; }
+            .hero__date { font-size: 18px; }
+            .hero__access { font-size: 16px; }
+            .hero__right { order: 2; }
+
+            .btn-cta {
+                font-size: 20px;
+                border-radius: 20px;
+                padding: 16px 30px;
+            }
+
+            .como-funciona {
+                padding: 30px 15px 60px;
+            }
+            .como-funciona__intro { font-size: 18px; }
+            .como-funciona__heading { font-size: 28px; }
+            .como-funciona__cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .step-card {
+                max-width: 100%;
+                min-height: auto;
+                padding: 25px;
+                margin: 5px 0;
+            }
+            .step-card__num { font-size: 36px; }
+            .step-card__title { font-size: 24px; }
+            .step-card__desc { font-size: 20px; margin-right: 0; }
+
+            .depoimentos {
+                padding: 30px 15px 60px;
+            }
+            .depoimentos__heading { font-size: 28px; }
+            .depoimentos__row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .depo-card {
+                max-width: 100%;
+                margin: 5px 0;
+                padding: 15px;
+            }
+            .depo-card__name { font-size: 20px; }
+            .depo-card__text { font-size: 18px; line-height: 24px; }
+            .depoimentos__spacer { height: 30px; }
+
+            .vantagens {
+                padding: 30px 15px 80px;
+            }
+            .vantagens__heading { font-size: 24px; }
+            .vantagem-card {
+                margin: 5px 0;
+                padding: 25px 25px 40px;
+            }
+            .vantagem-card__icon { width: 70px; }
+            .vantagem-card__title { font-size: 24px; }
+            .vantagem-card__desc { font-size: 20px; }
+
+            .oferta {
+                padding: 50px 15px 50px;
+            }
+            .oferta__inner { flex-direction: column; align-items: center; }
+            .oferta__text { min-width: auto; max-width: 100%; }
+            .oferta__text h2 { font-size: 27px; line-height: 1.1; text-align: center; }
+            .oferta__card { flex: 1 1 100%; padding: 30px 20px 50px; }
+            .oferta__card-title { font-size: 32px; width: 90%; }
+            .oferta__card-free { font-size: 60px; }
+            .oferta__card-sub { font-size: 20px; }
+            .oferta__card-price { font-size: 20px; }
+
+            .bio {
+                padding: 30px 15px 60px;
+                background: radial-gradient(at top right, #47270D 0%, #000000 60%);
+            }
+            .bio__inner {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            .bio__photo { width: 59%; max-width: 250px; }
+            .bio__content { padding: 15px 0; }
+            .bio__text { font-size: 18px; line-height: 24px; }
+            .bio__logo { max-width: 61%; margin: 20px auto 0; }
+
+            .faq {
+                padding: 20px 10px 60px;
+            }
+            .faq__heading { font-size: 30px; }
+            .faq__question { padding: 10px 0; }
+            .faq__question-text { font-size: 18px; }
+            .faq__answer { font-size: 18px; }
+            .faq__cta { margin-top: 40px; }
+
+            .site-footer {
+                padding: 0 15px 60px;
+            }
+            .site-footer__logo { max-width: 280px; }
+            .site-footer__text {
+                max-width: 95%;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== SECTION 1: HERO ==================== -->
+    <section class="hero">
+        <div class="hero__grid">
+            <div class="hero__left">
+                <img class="hero__logo" src="https://salgadeiroprofissional.com.br/wp-content/uploads/2026/03/evento-logo.png" alt="Empregado a Empres&aacute;rio" width="403" height="234">
+                <h1 class="hero__title">O CAMINHO PARA GANHAR <span class="highlight">R$10.000 POR M&Ecirc;S</span> COM SALGADOS</h1>
+                <p class="hero__subtitle">ESSE VAI SER <strong>O ANO DA SUA VIDA</strong></p>
+                <p class="hero__date">6, 7 E 8 DE ABRIL</p>
+                <p class="hero__access">ACESSO EXCLUSIVO PARA INSCRITOS</p>
+                <a href="https://sndflw.com/i/ErIJc3KE0Kz3bjCo5oXW" class="btn-cta btn-cta--small" target="_blank" rel="noopener">QUERO ME INSCREVER</a>
+            </div>
+            <div class="hero__right">
+                <img src="https://salgadeiroprofissional.com.br/wp-content/uploads/2026/03/MG_8619-e1772831318545.png" alt="Chef Claudia" width="786" height="1024">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 2: COMO FUNCIONA ==================== -->
+    <section class="como-funciona">
+        <div class="container">
+            <p class="como-funciona__intro"><strong>Transformando vidas e realizando sonhos</strong> atrav&eacute;s dos salgados.</p>
+            <h2 class="como-funciona__heading"><strong>Como ir&aacute; funcionar esse evento?</strong> E bem simples...</h2>
+            <div class="como-funciona__cards">
+                <div class="step-card">
+                    <span class="step-card__num">01.</span>
+                    <h3 class="step-card__title">INSCREVA-SE E ENTRE NO GRUPO VIP DO WHATSAPP</h3>
+                    <p class="step-card__desc">Ap&oacute;s garantir seu ingresso, entre para o grupo vip do whatsapp do nosso evento.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-card__num">02.</span>
+                    <h3 class="step-card__title">CONTE&Uacute;DOS GRAVADOS E AO VIVO</h3>
+                    <p class="step-card__desc">Voc&ecirc; receber&aacute; links exclusivos direto no WhatsApp para participar das aulas ao vivo e dos conte&uacute;dos gravados</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-card__num">03.</span>
+                    <h3 class="step-card__title">QUAIS S&Atilde;O OS TEMAS QUE SER&Atilde;O ABORDADOS?</h3>
+                    <p class="step-card__desc">Empreendedorismo no ramo de salgados e receitas maravilhosas para voc&ecirc; dar seus primeiros passos at&eacute; os R$10.000/m&ecirc;s.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://sndflw.com/i/ErIJc3KE0Kz3bjCo5oXW" class="btn-cta" target="_blank" rel="noopener">PRECISO DAS DICAS DA CLAUDINHA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 3: DEPOIMENTOS ==================== -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2 class="depoimentos__heading">Transformando vidas. Realizando sonhos.</h2>
+
+            <div class="depoimentos__row">
+                <div class="depo-card">
+                    <h3 class="depo-card__name">Ewerton Felipe</h3>
+                    <div class="depo-card__video" data-id="m36L5nqZkB8">
+                        <img src="https://img.youtube.com/vi/m36L5nqZkB8/hqdefault.jpg" alt="Depoimento Ewerton Felipe" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="depo-card__text">Ele come&ccedil;ou seu pr&oacute;prio neg&oacute;cio em meio a pandemia e <strong>recuperou o investimento do curso com 1 m&ecirc;s e meio</strong>.</p>
+                </div>
+                <div class="depo-card">
+                    <h3 class="depo-card__name">Maria Aparecida</h3>
+                    <div class="depo-card__video" data-id="Hx-Y8lGjszA">
+                        <img src="https://img.youtube.com/vi/Hx-Y8lGjszA/hqdefault.jpg" alt="Depoimento Maria Aparecida" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="depo-card__text">Ela passou a ter muita venda <strong>por indica&ccedil;&atilde;o</strong> ap&oacute;s utilizar as receitas do curso.</p>
+                </div>
+                <div class="depo-card">
+                    <h3 class="depo-card__name">Felipe Bas&iacute;lio</h3>
+                    <div class="depo-card__video" data-id="kLpqtQyHEkg">
+                        <img src="https://img.youtube.com/vi/kLpqtQyHEkg/hqdefault.jpg" alt="Depoimento Felipe Bas&iacute;lio" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="depo-card__text">&ldquo;Nossa barraca vende <strong>quase 2 mil salgadinhos por dia</strong>.&rdquo;</p>
+                </div>
+            </div>
+
+            <div class="depoimentos__row">
+                <div class="depo-card">
+                    <h3 class="depo-card__name">Jana&iacute;na Machado</h3>
+                    <div class="depo-card__video" data-id="rMy9OOKtsJo">
+                        <img src="https://img.youtube.com/vi/rMy9OOKtsJo/hqdefault.jpg" alt="Depoimento Jana&iacute;na Machado" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="depo-card__text">O que era para ser uma renda extra devido a pandemia, <strong>se tornou a renda principal</strong>, mas somente ap&oacute;s os ensinamentos do curso.</p>
+                </div>
+                <div class="depo-card">
+                    <h3 class="depo-card__name">Ricardo Rocha</h3>
+                    <div class="depo-card__video" data-id="5lbxJaxqI5Q">
+                        <img src="https://img.youtube.com/vi/5lbxJaxqI5Q/hqdefault.jpg" alt="Depoimento Ricardo Rocha" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="depo-card__text">De uma vida estagnada e sem renda para depois do curso, <strong>j&aacute; &ldquo;quase n&atilde;o dar conta&rdquo;</strong> de atender as demandas de nhoque.</p>
+                </div>
+            </div>
+
+            <div class="depoimentos__spacer"></div>
+            <div class="text-center">
+                <a href="https://sndflw.com/i/ErIJc3KE0Kz3bjCo5oXW" class="btn-cta btn-cta--brown" target="_blank" rel="noopener">QUERO TER ESSES RESULTADOS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 4: VANTAGENS ==================== -->
+    <section class="vantagens">
+        <div class="container">
+            <h2 class="vantagens__heading">4 VANTAGENS DE PARTICIPAR DO EVENTO ONLINE</h2>
+            <div class="vantagens__grid">
+                <div class="vantagem-card">
+                    <img class="vantagem-card__icon" src="https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/cs_icon_1.svg" alt="" width="95" height="100">
+                    <h3 class="vantagem-card__title">COMECE COM POUCO INVESTIMENTO</h3>
+                    <p class="vantagem-card__desc">Apenas comece. Voc&ecirc; vai escalando o seu neg&oacute;cio a medida que realiza mais e mais vendas.</p>
+                </div>
+                <div class="vantagem-card">
+                    <img class="vantagem-card__icon" src="https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/cs_icon_2.svg" alt="" width="100" height="91">
+                    <h3 class="vantagem-card__title">COMECE DO CONFORTO DA SUA CASA</h3>
+                    <p class="vantagem-card__desc">Voc&ecirc; n&atilde;o precisa come&ccedil;ar com um super maquin&aacute;rio e com loja. Com o que voc&ecirc; tem em sua cozinha j&aacute; &eacute; poss&iacute;vel iniciar o seu novo neg&oacute;cio.</p>
+                </div>
+                <div class="vantagem-card">
+                    <img class="vantagem-card__icon" src="https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/cs_icon_3.svg" alt="" width="96" height="95">
+                    <h3 class="vantagem-card__title">RECEITAS SIMPLES E PR&Aacute;TICAS</h3>
+                    <p class="vantagem-card__desc">S&atilde;o receitas para iniciantes simples e pr&aacute;ticas. Tudo facilitado para voc&ecirc; literalmente colocar a m&atilde;o na massa e buscar 10k com salgados.</p>
+                </div>
+                <div class="vantagem-card">
+                    <img class="vantagem-card__icon" src="https://salgadeiroprofissional.com.br/wp-content/uploads/2025/08/cs_icon_5.svg" alt="" width="86" height="86">
+                    <h3 class="vantagem-card__title">GANHE TEMPO E DINHEIRO MAIS R&Aacute;PIDO</h3>
+                    <p class="vantagem-card__desc">Informa&ccedil;&otilde;es organizadas para voc&ecirc; n&atilde;o precisar perder tempo procurando na internet o que voc&ecirc; encontra facilmente aqui.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 5: OFERTA ==================== -->
+    <section class="oferta">
+        <div class="oferta__inner">
+            <div class="oferta__text">
+                <h2>Os Links dos Conte&uacute;dos ser&atilde;o enviados no <span class="bold">GRUPO VIP do Whatsapp</span> nos dias <span class="red">6, 7 e 8 de abril.</span></h2>
+            </div>
+            <div class="oferta__card">
+                <h3 class="oferta__card-title">GARANTA SUA VAGA</h3>
+                <p class="oferta__card-sub">1 Ingresso para a <span class="underline-orange">Imers&atilde;o Online</span></p>
+                <p class="oferta__card-price">Lote 1 <span class="strike">R$97</span> por apenas</p>
+                <p class="oferta__card-free">GR&Aacute;TIS</p>
+                <a href="https://sndflw.com/i/ErIJc3KE0Kz3bjCo5oXW" class="btn-cta btn-cta--gold" target="_blank" rel="noopener">QUERO PARTICIPAR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 6: BIO ==================== -->
+    <section class="bio">
+        <div class="bio__inner">
+            <div class="bio__photo">
+                <img src="https://salgadeiroprofissional.com.br/wp-content/uploads/2025/07/CCS_bio_export_profile.png.webp" alt="Chef Claudia" width="374" height="374">
+            </div>
+            <div class="bio__content">
+                <p class="bio__text">Oi, meu nome &eacute; Claudia e sou salgadeira profissional a mais de 15 anos, al&eacute;m de consultora e empres&aacute;ria. J&aacute; ajudei mais de 15.000 pessoas a conseguirem construir grandes neg&oacute;cios s&oacute;lidos que come&ccedil;aram na cozinha de casa e hoje s&atilde;o uma verdadeira m&aacute;quina de vendas atrav&eacute;s dos meus cursos e apostilas.</p>
+                <p class="bio__text">Fundei o Clube dos Salgadeiros, o maior clube da &aacute;rea de salgados do Brasil. Al&eacute;m disso, criei o canal Claudia Salgados no YouTube, o maior canal especializado em salgados feitos em m&aacute;quinas do Brasil.</p>
+                <p class="bio__text">Meu canal no Youtube tem mais de 13 milh&otilde;es de visualiza&ccedil;&otilde;es e 230 mil inscritos, sendo uma refer&ecirc;ncia para milhares de empreendedores salgadeiros em todo Brasil. Espero conseguir te ajudar com algum dos meus conte&uacute;dos.</p>
+                <img class="bio__logo" src="https://salgadeiroprofissional.com.br/wp-content/uploads/2025/07/CCS_bio_export_logotipo_bege.png" alt="Claudia Salgados" width="276" height="85">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 7: FAQ ==================== -->
+    <section class="faq">
+        <div class="faq__list">
+            <h2 class="faq__heading">D&uacute;vidas mais comuns</h2>
+
+            <div class="faq__item">
+                <div class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                    <svg class="faq__question-icon" viewBox="0 0 192 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+                    <span class="faq__question-text">QUANDO SER&Aacute; O EVENTO?</span>
+                </div>
+                <div class="faq__answer">A imers&atilde;o online acontecer&aacute; dos dias 06 a 08 de abril com conte&uacute;dos gravados e ao vivo.</div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                    <svg class="faq__question-icon" viewBox="0 0 192 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+                    <span class="faq__question-text">VOU RECEBER ALGUMA COISA EM MINHA CASA?</span>
+                </div>
+                <div class="faq__answer">N&atilde;o. Todo o conte&uacute;do &eacute; disponibilizado on-line. 100% digital.</div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                    <svg class="faq__question-icon" viewBox="0 0 192 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+                    <span class="faq__question-text">POR QUANTO TEMPO TEREI ACESSO A IMERS&Atilde;O ONLINE VIVER DE SALGADOS?</span>
+                </div>
+                <div class="faq__answer">O Plano Para Independ&ecirc;ncia com Salgados mesclar&aacute; conte&uacute;dos ao vivo e gravados, mas voc&ecirc; poder&aacute; acessar a grava&ccedil;&atilde;o dos conte&uacute;dos ao vivo 48h &uacute;teis depois. Ap&oacute;s o evento, o conte&uacute;do N&Atilde;O ficar&aacute; dispon&iacute;vel para assistir novamente. Precisa assistir durante a semana.</div>
+            </div>
+
+            <div class="faq__cta">
+                <a href="https://sndflw.com/i/ErIJc3KE0Kz3bjCo5oXW" class="btn-cta btn-cta--arrow" target="_blank" rel="noopener">
+                    TIROU MINHAS D&Uacute;VIDAS, VOU PARTICIPAR
+                    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 8: FOOTER ==================== -->
+    <footer class="site-footer">
+        <img class="site-footer__logo" src="https://salgadeiroprofissional.com.br/wp-content/uploads/2026/03/evento-logo.png" alt="Empregado a Empres&aacute;rio" width="403" height="234">
+        <p class="site-footer__text">
+            As informa&ccedil;&otilde;es e n&uacute;meros contidos nesta p&aacute;gina representam os resultados da autora, Claudia Salgados e seus declarantes. Ao utilizar este site e consumir o conte&uacute;do aqui exposto, voc&ecirc; entende e concorda que os seus resultados poder&atilde;o ser diferentes.
+        </p>
+        <p class="site-footer__text" style="margin-top:15px;">
+            2025 &ndash; <strong>Claudia Salgados &amp; Cia</strong> &ndash; CNPJ 23.132.413/0001-25<br>
+            <a href="http://salgadeiroprofissional.com.br/politica-de-privacidade-2/">Pol&iacute;tica de Privacidade</a> &ndash; Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+    'use strict';
+    // YouTube lazy loading
+    document.querySelectorAll('.depo-card__video[data-id]').forEach(function(el) {
+        el.addEventListener('click', function() {
+            if (el.querySelector('iframe')) return;
+            var id = el.getAttribute('data-id');
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            el.innerHTML = '';
+            el.appendChild(iframe);
+        });
+    });
+    </script>
+
+</body>
+</html>
